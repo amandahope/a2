@@ -3,16 +3,13 @@
 require('tools.php');
 
 //check for form submission and set data to variables
-$word = (isset($_GET["word"])) ? $_GET["word"] : "";
-$bonus = (isset($_GET["bonus"])) ? $_GET["bonus"] : "";
+/* $word = (isset($_GET["word"])) ? $_GET["word"] : "";
+$bonus = (isset($_GET["bonus"])) ? $_GET["bonus"] : ""; */
 $bingo = (isset($_GET["bingo"])) ? true : false;
 $score = 0;
+$lettersArray = (isset($_GET)) ? $_GET : "";
 
-//sanitize text input
-
-
-//capitalize word and separate into letters
-$lettersArray = str_split(strtoupper($word));
+dump($lettersArray);
 
 //match each letter to its value and sum the values
 
@@ -45,27 +42,44 @@ $letterValueArray = [
   "Z" => 10
 ];
 
-foreach($lettersArray as $index => $wordLetter) {
+foreach($lettersArray as $letterNumber => $wordLetter) {
   foreach($letterValueArray as $letter => $value) {
-    if($letter == $wordLetter) {
-      $score += $value;
-      break;
+    if($letter == $wordLetter[0]) {
+      if(isset($wordLetter[1])) {
+        if ($wordLetter[1] == "doubleletter") {
+          $score += ($value * 2);
+          break;
+        } elseif ($wordLetter[1] == "tripleletter") {
+          $score += ($value * 3);
+          break;
+        } else {
+          $score += $value;
+          break;
+        }
+      } else {
+        $score += $value;
+        break;
+      }
     }
   }
 }
 
 //multiply sum by bonus points, if necessary
 
-if($bonus == "double") {
-  $score = $score * 2;
-} elseif ($bonus == "triple") {
-  $score = $score * 3;
+foreach($lettersArray as $letterNumber => $wordLetter) {
+  if(isset($wordLetter[1])) {
+    if($wordLetter[1] == "doubleword") {
+      $score = $score * 2;
+    } elseif($wordLetter[1] == "tripleword") {
+      $score = $score * 3;
+    }
+  }
 }
 
 //add bingo points, if necessary
-
+/*
 if($bingo == true) {
   $score = $score + 50;
 }
-
+*/
 dump($score);
