@@ -1,15 +1,25 @@
 <?php
 
-require('tools.php');
+require("tools.php");
+require("Form.php");
 
-//check for form submission and set data to variables
-/* $word = (isset($_GET["word"])) ? $_GET["word"] : "";
-$bonus = (isset($_GET["bonus"])) ? $_GET["bonus"] : ""; */
-$bingo = (isset($_GET["bingo"])) ? true : false;
+//check for form submission and set data to a variable
+
+if(isset($_GET["letter1"])) {
+  $lettersArray = $_GET;
+} else {
+  $lettersArray = [
+    "letter1" => ["", ""],
+    "letter2" => ["", ""],
+    "letter3" => ["", ""],
+    "letter4" => ["", ""],
+    "letter5" => ["", ""]
+  ];
+}
+
+$bingo = (isset($lettersArray["bingo"])) ? true : false;
+
 $score = 0;
-$lettersArray = (isset($_GET)) ? $_GET : "";
-
-dump($lettersArray);
 
 //match each letter to its value and sum the values
 
@@ -77,9 +87,9 @@ foreach($lettersArray as $letterNumber => $wordLetter) {
 }
 
 //add bingo points, if necessary
-/*
-if($bingo == true) {
+
+if($bingo) {
   $score = $score + 50;
 }
-*/
+
 dump($score);
