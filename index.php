@@ -13,10 +13,17 @@
 <body class="container-fluid">
   <h1>Scrabble Word Score Calculator</h1>
 
+
   <form method="GET" action="/">
+
     <div class="row">
+      <span class="help-block col-xs-12">Fields marked with * are required.</span>
+    </div>
+
+    <div class="row">
+
       <fieldset class="col-xs-1">
-        <legend>Letter 1:</legend>
+        <legend>*Letter 1:</legend>
         <select name="letter1[]" class="form-control">
           <option value=""></option>
           <option value="BLANK" <?php if($lettersArray["letter1"][0] == "BLANK") echo 'SELECTED'?>>BLANK</option>
@@ -75,7 +82,7 @@
       </fieldset>
 
       <fieldset  class="col-xs-1">
-        <legend>Letter 2:</legend>
+        <legend>*Letter 2:</legend>
         <select name="letter2[]" class="form-control">
           <option value=""></option>
           <option value="BLANK" <?php if($lettersArray["letter2"][0] == "BLANK") echo 'SELECTED'?>>BLANK</option>
@@ -312,7 +319,7 @@
     </div>
 
     <div class="row">
-      <div class="checkbox form-group">
+      <div class="checkbox form-group col-xs-12">
         <label for="bingo">
           <input type="checkbox" name="bingo" value="bingo" id="bingo" <?php if($bingo) echo "CHECKED"?> />
           <span class="label-body">This word used all seven tiles.</span>
@@ -320,11 +327,15 @@
       </div>
     </div>
     <div class="row">
-      <div class="form-group">
+      <div class="form-group col-xs-12">
         <input type="submit" value="Submit" class="btn btn-primary" />
       </div>
     </div>
   </form>
+
+  <?php if($form->isSubmitted()): ?>
+    <div class="alert alert-info">Your word is worth <?=$score?> points.</div>
+  <?php endif; ?>
 
 
 </body>
