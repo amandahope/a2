@@ -14,6 +14,16 @@ $lettersArray = [
   "letter5" => ["", ""]
 ];
 
+$letter1 = "";
+$letter1Bonus = "";
+$letter2 = "";
+$letter2Bonus = "";
+$letter3 = "";
+$letter3Bonus = "";
+$letter4 = "";
+$letter4Bonus = "";
+$letter5 = "";
+$letter5Bonus = "";
 $bingo = "";
 
 $letterValueArray = [
@@ -45,13 +55,50 @@ $letterValueArray = [
   "Z" => 10
 ];
 
+
 $form = new Form($_GET);
 $wordGames = new WordGames($letterValueArray);
 
+function hasValue($formData) {
+  if($formData !="" && !is_null($formData)) {
+    return TRUE;
+  } else {
+    return FALSE;
+  }
+}
+
 if($form->isSubmitted()) {
-    $lettersArray = $_GET;
-    $bingo = $form->isChosen("bingo");
 
-$score = $wordGames->calculateScore($lettersArray, $bingo);
+    $errors = [];
+    $lengthError = "Scrabble words must be at least two letters long.
+                    Please enter values for Letter 1 and Letter 2.";
 
+    if(!hasValue($_GET["letter1"][0])) {
+      $errors[] = $lengthError;
+    } elseif(!hasValue($_GET["letter2"][0])) {
+      $errors[] = $lengthError;
+    }
+
+    if(!$errors) {
+      $lettersArray = $_GET;
+
+      $letter1 = (isset($lettersArray["letter1"][0])) ? $lettersArray["letter1"][0] : "";
+      $letter1Bonus = (isset($lettersArray["letter1"][1])) ? $lettersArray["letter1"][1] : "";
+
+      $letter2 = (isset($lettersArray["letter2"][0])) ? $lettersArray["letter2"][0] : "";
+      $letter2Bonus = (isset($lettersArray["letter2"][1])) ? $lettersArray["letter2"][1] : "";
+
+      $letter3 = (isset($lettersArray["letter3"][0])) ? $lettersArray["letter3"][0] : "";
+      $letter3Bonus = (isset($lettersArray["letter3"][1])) ? $lettersArray["letter3"][1] : "";
+
+      $letter4 = (isset($lettersArray["letter4"][0])) ? $lettersArray["letter4"][0] : "";
+      $letter4Bonus = (isset($lettersArray["letter4"][1])) ? $lettersArray["letter4"][1] : "";
+
+      $letter5 = (isset($lettersArray["letter5"][0])) ? $lettersArray["letter5"][0] : "";
+      $letter5Bonus = (isset($lettersArray["letter5"][1])) ? $lettersArray["letter5"][1] : "";
+
+      $bingo = $form->isChosen("bingo");
+
+      $score = $wordGames->calculateScore($lettersArray, $bingo);
+    }
 }
