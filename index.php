@@ -24,9 +24,7 @@
             <fieldset class="col-xs-1">
                 <legend>*Letter 1:</legend>
                 <select name="letter1[]" class="form-control">
-                    <label for="letter1empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter1empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter1 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter1 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter1 == "B") echo 'SELECTED'?>>B</option>
@@ -85,9 +83,7 @@
             <fieldset  class="col-xs-1">
                 <legend>*Letter 2:</legend>
                 <select name="letter2[]" class="form-control">
-                    <label for="letter2empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter2empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter2 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter2 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter2 == "B") echo 'SELECTED'?>>B</option>
@@ -146,9 +142,7 @@
             <fieldset  class="col-xs-1">
                 <legend>Letter 3:</legend>
                 <select name="letter3[]" class="form-control">
-                    <label for="letter3empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter3empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter3 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter3 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter3 == "B") echo 'SELECTED'?>>B</option>
@@ -207,9 +201,7 @@
             <fieldset  class="col-xs-1">
                 <legend>Letter 4:</legend>
                 <select name="letter4[]" class="form-control">
-                    <label for="letter4empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter4empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter4 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter4 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter4 == "B") echo 'SELECTED'?>>B</option>
@@ -268,9 +260,7 @@
             <fieldset  class="col-xs-1">
                 <legend>Letter 5:</legend>
                 <select name="letter5[]" class="form-control">
-                    <label for="letter5empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter5empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter5 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter5 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter5 == "B") echo 'SELECTED'?>>B</option>
@@ -329,9 +319,7 @@
             <fieldset  class="col-xs-1">
                 <legend>Letter 6:</legend>
                 <select name="letter6[]" class="form-control">
-                    <label for="letter6empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter6empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter6 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter6 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter6 == "B") echo 'SELECTED'?>>B</option>
@@ -390,9 +378,7 @@
             <fieldset  class="col-xs-1">
                 <legend>Letter 7:</legend>
                 <select name="letter7[]" class="form-control">
-                    <label for="letter7empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter7empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter7 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter7 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter7 == "B") echo 'SELECTED'?>>B</option>
@@ -451,9 +437,7 @@
             <fieldset  class="col-xs-1">
                 <legend>Letter 8:</legend>
                 <select name="letter8[]" class="form-control">
-                    <label for="letter8empty" class="sr-only">Please choose a letter.
-                        <option value="" id="letter8empty"></option>
-                    </label>
+                    <option value="">&nbsp;</option>
                     <option value="_" <?php if($letter8 == "_") echo 'SELECTED'?>>BLANK</option>
                     <option value="A" <?php if($letter8 == "A") echo 'SELECTED'?>>A</option>
                     <option value="B" <?php if($letter8 == "B") echo 'SELECTED'?>>B</option>
