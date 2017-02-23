@@ -75,16 +75,18 @@ class WordGames {
 
         #add bingo points, if necessary
         if($bingo) {
-            #check that at least 7 letters are used
-            if($lettersArray["letter1"][0] == "" ||
-                $lettersArray["letter2"][0] == "" ||
-                $lettersArray["letter3"][0] == "" ||
-                $lettersArray["letter4"][0] == "" ||
-                $lettersArray["letter5"][0] == "" ||
-                $lettersArray["letter6"][0] == "" ||
-                $lettersArray["letter7"][0] == "") {
-                    $score = $score;
-            } else {
+
+            #find out how many letters have been entered
+            $enteredLetters = [];
+            foreach($lettersArray as $letterNumber => $wordLetter) {
+                if($wordLetter[0]!="") {
+                    $enteredLetters[] = $wordLetter[0];
+                }
+            }
+            $numberOfLetters = count($enteredLetters);
+
+            #if at least 7, add bingo bonus
+            if($numberOfLetters > 6) {
                 $score = $score + 50;
             }
         }
@@ -116,22 +118,27 @@ class WordGames {
         #If bingo bonus has been selected, check that at least 7 letters
         #were used, and issue a warning if not.
         if($bingo) {
-            if($lettersArray["letter1"][0] == "" ||
-                $lettersArray["letter2"][0] == "" ||
-                $lettersArray["letter3"][0] == "" ||
-                $lettersArray["letter4"][0] == "" ||
-                $lettersArray["letter5"][0] == "" ||
-                $lettersArray["letter6"][0] == "" ||
-                $lettersArray["letter7"][0] == "") {
-                    $warnings[] = "To claim a bonus for using all seven tiles,
-                        your word must have at least seven letters. Bonus for
-                        using all tiles was not included in the calculation of
-                        your score.";
+
+            #find out how many letters have been entered
+            $enteredLetters = [];
+            foreach($lettersArray as $letterNumber => $wordLetter) {
+                if($wordLetter[0]!="") {
+                    $enteredLetters[] = $wordLetter[0];
+                }
+            }
+            $numberOfLetters = count($enteredLetters);
+
+            #if less than 7, issue warning
+            if($numberOfLetters < 7) {
+                $warnings[] = "To claim a bonus for using all seven tiles,
+                    your word must have at least seven letters. Bonus for
+                    using all tiles was not included in the calculation of
+                    your score.";
             }
         }
 
         return $warnings;
-  }
+    }
 
 
 } # end of class
