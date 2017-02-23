@@ -502,8 +502,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-xs-12">
+            <div class="form-group col-xs-1">
                 <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+            <div class="form-group col-xs-1">
+                <button type="reset" value="Clear Form" class="btn btn-default">Clear Form</button>
             </div>
         </div>
     </form>
