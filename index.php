@@ -26,7 +26,7 @@
         <legend>*Letter 1:</legend>
         <select name="letter1[]" class="form-control">
           <option value=""></option>
-          <option value="BLANK" <?php if($letter1 == "BLANK") echo 'SELECTED'?>>BLANK</option>
+          <option value="_" <?php if($letter1 == "_") echo 'SELECTED'?>>BLANK</option>
           <option value="A" <?php if($letter1 == "A") echo 'SELECTED'?>>A</option>
           <option value="B" <?php if($letter1 == "B") echo 'SELECTED'?>>B</option>
           <option value="C" <?php if($letter1 == "C") echo 'SELECTED'?>>C</option>
@@ -85,7 +85,7 @@
         <legend>*Letter 2:</legend>
         <select name="letter2[]" class="form-control">
           <option value=""></option>
-          <option value="BLANK" <?php if($letter2 == "BLANK") echo 'SELECTED'?>>BLANK</option>
+          <option value="_" <?php if($letter2 == "_") echo 'SELECTED'?>>BLANK</option>
           <option value="A" <?php if($letter2 == "A") echo 'SELECTED'?>>A</option>
           <option value="B" <?php if($letter2 == "B") echo 'SELECTED'?>>B</option>
           <option value="C" <?php if($letter2 == "C") echo 'SELECTED'?>>C</option>
@@ -144,7 +144,7 @@
         <legend>Letter 3:</legend>
         <select name="letter3[]" class="form-control">
           <option value=""></option>
-          <option value="BLANK" <?php if($letter3 == "BLANK") echo 'SELECTED'?>>BLANK</option>
+          <option value="_" <?php if($letter3 == "_") echo 'SELECTED'?>>BLANK</option>
           <option value="A" <?php if($letter3 == "A") echo 'SELECTED'?>>A</option>
           <option value="B" <?php if($letter3 == "B") echo 'SELECTED'?>>B</option>
           <option value="C" <?php if($letter3 == "C") echo 'SELECTED'?>>C</option>
@@ -203,7 +203,7 @@
         <legend>Letter 4:</legend>
         <select name="letter4[]" class="form-control">
           <option value=""></option>
-          <option value="BLANK" <?php if($letter4 == "BLANK") echo 'SELECTED'?>>BLANK</option>
+          <option value="_" <?php if($letter4 == "_") echo 'SELECTED'?>>BLANK</option>
           <option value="A" <?php if($letter4 == "A") echo 'SELECTED'?>>A</option>
           <option value="B" <?php if($letter4 == "B") echo 'SELECTED'?>>B</option>
           <option value="C" <?php if($letter4 == "C") echo 'SELECTED'?>>C</option>
@@ -262,7 +262,7 @@
         <legend>Letter 5:</legend>
         <select name="letter5[]" class="form-control">
           <option value=""></option>
-          <option value="BLANK" <?php if($letter5 == "BLANK") echo 'SELECTED'?>>BLANK</option>
+          <option value="_" <?php if($letter5 == "_") echo 'SELECTED'?>>BLANK</option>
           <option value="A" <?php if($letter5 == "A") echo 'SELECTED'?>>A</option>
           <option value="B" <?php if($letter5 == "B") echo 'SELECTED'?>>B</option>
           <option value="C" <?php if($letter5 == "C") echo 'SELECTED'?>>C</option>
@@ -316,6 +316,183 @@
           </label>
         </div>
       </fieldset>
+
+      <fieldset  class="col-xs-1">
+        <legend>Letter 6:</legend>
+        <select name="letter6[]" class="form-control">
+          <option value=""></option>
+          <option value="_" <?php if($letter6 == "_") echo 'SELECTED'?>>BLANK</option>
+          <option value="A" <?php if($letter6 == "A") echo 'SELECTED'?>>A</option>
+          <option value="B" <?php if($letter6 == "B") echo 'SELECTED'?>>B</option>
+          <option value="C" <?php if($letter6 == "C") echo 'SELECTED'?>>C</option>
+          <option value="D" <?php if($letter6 == "D") echo 'SELECTED'?>>D</option>
+          <option value="E" <?php if($letter6 == "E") echo 'SELECTED'?>>E</option>
+          <option value="F" <?php if($letter6 == "F") echo 'SELECTED'?>>F</option>
+          <option value="G" <?php if($letter6 == "G") echo 'SELECTED'?>>G</option>
+          <option value="H" <?php if($letter6 == "H") echo 'SELECTED'?>>H</option>
+          <option value="I" <?php if($letter6 == "I") echo 'SELECTED'?>>I</option>
+          <option value="J" <?php if($letter6 == "J") echo 'SELECTED'?>>J</option>
+          <option value="K" <?php if($letter6 == "K") echo 'SELECTED'?>>K</option>
+          <option value="L" <?php if($letter6 == "L") echo 'SELECTED'?>>L</option>
+          <option value="M" <?php if($letter6 == "M") echo 'SELECTED'?>>M</option>
+          <option value="N" <?php if($letter6 == "N") echo 'SELECTED'?>>N</option>
+          <option value="O" <?php if($letter6 == "O") echo 'SELECTED'?>>O</option>
+          <option value="P" <?php if($letter6 == "P") echo 'SELECTED'?>>P</option>
+          <option value="Q" <?php if($letter6 == "Q") echo 'SELECTED'?>>Q</option>
+          <option value="R" <?php if($letter6 == "R") echo 'SELECTED'?>>R</option>
+          <option value="S" <?php if($letter6 == "S") echo 'SELECTED'?>>S</option>
+          <option value="T" <?php if($letter6 == "T") echo 'SELECTED'?>>T</option>
+          <option value="U" <?php if($letter6 == "U") echo 'SELECTED'?>>U</option>
+          <option value="V" <?php if($letter6 == "V") echo 'SELECTED'?>>V</option>
+          <option value="W" <?php if($letter6 == "W") echo 'SELECTED'?>>W</option>
+          <option value="X" <?php if($letter6 == "X") echo 'SELECTED'?>>X</option>
+          <option value="Y" <?php if($letter6 == "Y") echo 'SELECTED'?>>Y</option>
+          <option value="Z" <?php if($letter6 == "Z") echo 'SELECTED'?>>Z</option>
+        </select>
+        <div class="radio">
+          <label for="none6">
+            <input type="radio" name="letter6[]" value="none" id="none6" <?php if($letter6Bonus == "none") echo 'CHECKED'?> />No Bonus
+          </label>
+        </div>
+        <div class="radio">
+          <label for="doubleletter6">
+            <input type="radio" name="letter6[]" value="doubleletter" id="doubleletter6" <?php if($letter6Bonus == "doubleletter") echo 'CHECKED'?> />Letter x2
+          </label>
+        </div>
+        <div class="radio">
+          <label for="tripleletter6">
+            <input type="radio" name="letter6[]" value="tripleletter" id="tripleletter6" <?php if($letter6Bonus == "tripleletter") echo 'CHECKED'?> />Letter x3
+          </label>
+        </div>
+        <div class="radio">
+          <label for="doubleword6">
+            <input type="radio" name="letter6[]" value="doubleword" id="doubleword6" <?php if($letter6Bonus == "doubleword") echo 'CHECKED'?> />Word x2
+          </label>
+        </div>
+        <div class="radio">
+          <label for="tripleword6">
+            <input type="radio" name="letter6[]" value="tripleword" id="tripleword6" <?php if($letter6Bonus == "tripleword") echo 'CHECKED'?> />Word x3
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset  class="col-xs-1">
+        <legend>Letter 7:</legend>
+        <select name="letter7[]" class="form-control">
+          <option value=""></option>
+          <option value="_" <?php if($letter7 == "_") echo 'SELECTED'?>>BLANK</option>
+          <option value="A" <?php if($letter7 == "A") echo 'SELECTED'?>>A</option>
+          <option value="B" <?php if($letter7 == "B") echo 'SELECTED'?>>B</option>
+          <option value="C" <?php if($letter7 == "C") echo 'SELECTED'?>>C</option>
+          <option value="D" <?php if($letter7 == "D") echo 'SELECTED'?>>D</option>
+          <option value="E" <?php if($letter7 == "E") echo 'SELECTED'?>>E</option>
+          <option value="F" <?php if($letter7 == "F") echo 'SELECTED'?>>F</option>
+          <option value="G" <?php if($letter7 == "G") echo 'SELECTED'?>>G</option>
+          <option value="H" <?php if($letter7 == "H") echo 'SELECTED'?>>H</option>
+          <option value="I" <?php if($letter7 == "I") echo 'SELECTED'?>>I</option>
+          <option value="J" <?php if($letter7 == "J") echo 'SELECTED'?>>J</option>
+          <option value="K" <?php if($letter7 == "K") echo 'SELECTED'?>>K</option>
+          <option value="L" <?php if($letter7 == "L") echo 'SELECTED'?>>L</option>
+          <option value="M" <?php if($letter7 == "M") echo 'SELECTED'?>>M</option>
+          <option value="N" <?php if($letter7 == "N") echo 'SELECTED'?>>N</option>
+          <option value="O" <?php if($letter7 == "O") echo 'SELECTED'?>>O</option>
+          <option value="P" <?php if($letter7 == "P") echo 'SELECTED'?>>P</option>
+          <option value="Q" <?php if($letter7 == "Q") echo 'SELECTED'?>>Q</option>
+          <option value="R" <?php if($letter7 == "R") echo 'SELECTED'?>>R</option>
+          <option value="S" <?php if($letter7 == "S") echo 'SELECTED'?>>S</option>
+          <option value="T" <?php if($letter7 == "T") echo 'SELECTED'?>>T</option>
+          <option value="U" <?php if($letter7 == "U") echo 'SELECTED'?>>U</option>
+          <option value="V" <?php if($letter7 == "V") echo 'SELECTED'?>>V</option>
+          <option value="W" <?php if($letter7 == "W") echo 'SELECTED'?>>W</option>
+          <option value="X" <?php if($letter7 == "X") echo 'SELECTED'?>>X</option>
+          <option value="Y" <?php if($letter7 == "Y") echo 'SELECTED'?>>Y</option>
+          <option value="Z" <?php if($letter7 == "Z") echo 'SELECTED'?>>Z</option>
+        </select>
+        <div class="radio">
+          <label for="none7">
+            <input type="radio" name="letter7[]" value="none" id="none7" <?php if($letter7Bonus == "none") echo 'CHECKED'?> />No Bonus
+          </label>
+        </div>
+        <div class="radio">
+          <label for="doubleletter7">
+            <input type="radio" name="letter7[]" value="doubleletter" id="doubleletter7" <?php if($letter7Bonus == "doubleletter") echo 'CHECKED'?> />Letter x2
+          </label>
+        </div>
+        <div class="radio">
+          <label for="tripleletter7">
+            <input type="radio" name="letter7[]" value="tripleletter" id="tripleletter7" <?php if($letter7Bonus == "tripleletter") echo 'CHECKED'?> />Letter x3
+          </label>
+        </div>
+        <div class="radio">
+          <label for="doubleword7">
+            <input type="radio" name="letter7[]" value="doubleword" id="doubleword7" <?php if($letter7Bonus == "doubleword") echo 'CHECKED'?> />Word x2
+          </label>
+        </div>
+        <div class="radio">
+          <label for="tripleword7">
+            <input type="radio" name="letter7[]" value="tripleword" id="tripleword7" <?php if($letter7Bonus == "tripleword") echo 'CHECKED'?> />Word x3
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset  class="col-xs-1">
+        <legend>Letter 8:</legend>
+        <select name="letter8[]" class="form-control">
+          <option value=""></option>
+          <option value="_" <?php if($letter8 == "_") echo 'SELECTED'?>>BLANK</option>
+          <option value="A" <?php if($letter8 == "A") echo 'SELECTED'?>>A</option>
+          <option value="B" <?php if($letter8 == "B") echo 'SELECTED'?>>B</option>
+          <option value="C" <?php if($letter8 == "C") echo 'SELECTED'?>>C</option>
+          <option value="D" <?php if($letter8 == "D") echo 'SELECTED'?>>D</option>
+          <option value="E" <?php if($letter8 == "E") echo 'SELECTED'?>>E</option>
+          <option value="F" <?php if($letter8 == "F") echo 'SELECTED'?>>F</option>
+          <option value="G" <?php if($letter8 == "G") echo 'SELECTED'?>>G</option>
+          <option value="H" <?php if($letter8 == "H") echo 'SELECTED'?>>H</option>
+          <option value="I" <?php if($letter8 == "I") echo 'SELECTED'?>>I</option>
+          <option value="J" <?php if($letter8 == "J") echo 'SELECTED'?>>J</option>
+          <option value="K" <?php if($letter8 == "K") echo 'SELECTED'?>>K</option>
+          <option value="L" <?php if($letter8 == "L") echo 'SELECTED'?>>L</option>
+          <option value="M" <?php if($letter8 == "M") echo 'SELECTED'?>>M</option>
+          <option value="N" <?php if($letter8 == "N") echo 'SELECTED'?>>N</option>
+          <option value="O" <?php if($letter8 == "O") echo 'SELECTED'?>>O</option>
+          <option value="P" <?php if($letter8 == "P") echo 'SELECTED'?>>P</option>
+          <option value="Q" <?php if($letter8 == "Q") echo 'SELECTED'?>>Q</option>
+          <option value="R" <?php if($letter8 == "R") echo 'SELECTED'?>>R</option>
+          <option value="S" <?php if($letter8 == "S") echo 'SELECTED'?>>S</option>
+          <option value="T" <?php if($letter8 == "T") echo 'SELECTED'?>>T</option>
+          <option value="U" <?php if($letter8 == "U") echo 'SELECTED'?>>U</option>
+          <option value="V" <?php if($letter8 == "V") echo 'SELECTED'?>>V</option>
+          <option value="W" <?php if($letter8 == "W") echo 'SELECTED'?>>W</option>
+          <option value="X" <?php if($letter8 == "X") echo 'SELECTED'?>>X</option>
+          <option value="Y" <?php if($letter8 == "Y") echo 'SELECTED'?>>Y</option>
+          <option value="Z" <?php if($letter8 == "Z") echo 'SELECTED'?>>Z</option>
+        </select>
+        <div class="radio">
+          <label for="none8">
+            <input type="radio" name="letter8[]" value="none" id="none8" <?php if($letter8Bonus == "none") echo 'CHECKED'?> />No Bonus
+          </label>
+        </div>
+        <div class="radio">
+          <label for="doubleletter8">
+            <input type="radio" name="letter8[]" value="doubleletter" id="doubleletter8" <?php if($letter8Bonus == "doubleletter") echo 'CHECKED'?> />Letter x2
+          </label>
+        </div>
+        <div class="radio">
+          <label for="tripleletter8">
+            <input type="radio" name="letter8[]" value="tripleletter" id="tripleletter8" <?php if($letter8Bonus == "tripleletter") echo 'CHECKED'?> />Letter x3
+          </label>
+        </div>
+        <div class="radio">
+          <label for="doubleword8">
+            <input type="radio" name="letter8[]" value="doubleword" id="doubleword8" <?php if($letter8Bonus == "doubleword") echo 'CHECKED'?> />Word x2
+          </label>
+        </div>
+        <div class="radio">
+          <label for="tripleword8">
+            <input type="radio" name="letter8[]" value="tripleword" id="tripleword8" <?php if($letter8Bonus == "tripleword") echo 'CHECKED'?> />Word x3
+          </label>
+        </div>
+      </fieldset>
     </div>
 
     <div class="row">
@@ -336,12 +513,21 @@
   <?php if($form->isSubmitted()): ?>
     <?php if($errors): ?>
       <div class="alert alert-danger">
-        <?php foreach($errors as $error): ?>
-          <?=$error?><br />
-        <?php endforeach; ?>
+          <?=$errors?><br />
       </div>
     <?php else: ?>
-      <div class="alert alert-info">Your word is worth <?=$score?> points.</div>
+
+      <?php if($warnings): ?>
+        <div class="alert alert-warning">
+          <?php foreach($warnings as $warning): ?>
+            <ul class="list-unstyled">
+              <li><?=$warning?></li>
+            </ul>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+
+      <div class="alert alert-info">Your word, <?=$userWord?>, is worth <?=$score?> points.</div>
     <?php endif; ?>
   <?php endif; ?>
 

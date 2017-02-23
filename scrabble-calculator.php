@@ -1,6 +1,5 @@
 <?php
 
-require("tools.php");
 require("Form.php");
 require("WordGames.php");
 
@@ -11,7 +10,10 @@ $lettersArray = [
   "letter2" => ["", ""],
   "letter3" => ["", ""],
   "letter4" => ["", ""],
-  "letter5" => ["", ""]
+  "letter5" => ["", ""],
+  "letter6" => ["", ""],
+  "letter7" => ["", ""],
+  "letter8" => ["", ""],
 ];
 
 $letter1 = "";
@@ -24,9 +26,16 @@ $letter4 = "";
 $letter4Bonus = "";
 $letter5 = "";
 $letter5Bonus = "";
+$letter6 = "";
+$letter6Bonus = "";
+$letter7 = "";
+$letter7Bonus = "";
+$letter8 = "";
+$letter8Bonus = "";
 $bingo = "";
 
 $letterValueArray = [
+  "_" => 0,
   "A" => 1,
   "B" => 3,
   "C" => 3,
@@ -69,36 +78,49 @@ function hasValue($formData) {
 
 if($form->isSubmitted()) {
 
-    $errors = [];
-    $lengthError = "Scrabble words must be at least two letters long.
-                    Please enter values for Letter 1 and Letter 2.";
+  $lettersArray = $_GET;
 
-    if(!hasValue($_GET["letter1"][0])) {
-      $errors[] = $lengthError;
-    } elseif(!hasValue($_GET["letter2"][0])) {
-      $errors[] = $lengthError;
-    }
+  $letter1 = (isset($lettersArray["letter1"][0])) ? $lettersArray["letter1"][0] : "";
+  $letter1Bonus = (isset($lettersArray["letter1"][1])) ? $lettersArray["letter1"][1] : "";
+
+  $letter2 = (isset($lettersArray["letter2"][0])) ? $lettersArray["letter2"][0] : "";
+  $letter2Bonus = (isset($lettersArray["letter2"][1])) ? $lettersArray["letter2"][1] : "";
+
+  $letter3 = (isset($lettersArray["letter3"][0])) ? $lettersArray["letter3"][0] : "";
+  $letter3Bonus = (isset($lettersArray["letter3"][1])) ? $lettersArray["letter3"][1] : "";
+
+  $letter4 = (isset($lettersArray["letter4"][0])) ? $lettersArray["letter4"][0] : "";
+  $letter4Bonus = (isset($lettersArray["letter4"][1])) ? $lettersArray["letter4"][1] : "";
+
+  $letter5 = (isset($lettersArray["letter5"][0])) ? $lettersArray["letter5"][0] : "";
+  $letter5Bonus = (isset($lettersArray["letter5"][1])) ? $lettersArray["letter5"][1] : "";
+
+  $letter6 = (isset($lettersArray["letter6"][0])) ? $lettersArray["letter6"][0] : "";
+  $letter6Bonus = (isset($lettersArray["letter6"][1])) ? $lettersArray["letter6"][1] : "";
+
+  $letter7 = (isset($lettersArray["letter7"][0])) ? $lettersArray["letter7"][0] : "";
+  $letter7Bonus = (isset($lettersArray["letter7"][1])) ? $lettersArray["letter7"][1] : "";
+
+  $letter8 = (isset($lettersArray["letter8"][0])) ? $lettersArray["letter8"][0] : "";
+  $letter8Bonus = (isset($lettersArray["letter8"][1])) ? $lettersArray["letter8"][1] : "";
+
+  $errors = "";
+  $lengthError = "Scrabble words must be at least two letters long.
+                  Please enter values for Letter 1 and Letter 2.";
+
+  if(!hasValue($_GET["letter1"][0])) {
+    $errors = $lengthError;
+  } elseif(!hasValue($_GET["letter2"][0])) {
+    $errors = $lengthError;
+  }
 
     if(!$errors) {
-      $lettersArray = $_GET;
 
-      $letter1 = (isset($lettersArray["letter1"][0])) ? $lettersArray["letter1"][0] : "";
-      $letter1Bonus = (isset($lettersArray["letter1"][1])) ? $lettersArray["letter1"][1] : "";
-
-      $letter2 = (isset($lettersArray["letter2"][0])) ? $lettersArray["letter2"][0] : "";
-      $letter2Bonus = (isset($lettersArray["letter2"][1])) ? $lettersArray["letter2"][1] : "";
-
-      $letter3 = (isset($lettersArray["letter3"][0])) ? $lettersArray["letter3"][0] : "";
-      $letter3Bonus = (isset($lettersArray["letter3"][1])) ? $lettersArray["letter3"][1] : "";
-
-      $letter4 = (isset($lettersArray["letter4"][0])) ? $lettersArray["letter4"][0] : "";
-      $letter4Bonus = (isset($lettersArray["letter4"][1])) ? $lettersArray["letter4"][1] : "";
-
-      $letter5 = (isset($lettersArray["letter5"][0])) ? $lettersArray["letter5"][0] : "";
-      $letter5Bonus = (isset($lettersArray["letter5"][1])) ? $lettersArray["letter5"][1] : "";
+      $userWord = trim($letter1.$letter2.$letter3.$letter4.$letter5.$letter6.$letter7.$letter8);
 
       $bingo = $form->isChosen("bingo");
 
       $score = $wordGames->calculateScore($lettersArray, $bingo);
+      $warnings = $wordGames->generateWarnings($lettersArray, $bingo);
     }
 }
