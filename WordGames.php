@@ -76,14 +76,17 @@ class WordGames {
         #add bingo points, if necessary
         if($bingo) {
 
+            #when bingo has been selected, the last item in the array is
+            #the bingo, not a letter, so it is removed first
+            array_pop($lettersArray);
+
             #find out how many letters have been entered
-            $enteredLetters = [];
+            $numberOfLetters = 0;
             foreach($lettersArray as $letterNumber => $wordLetter) {
                 if($wordLetter[0]!="") {
-                    $enteredLetters[] = $wordLetter[0];
+                    ++$numberOfLetters;
                 }
             }
-            $numberOfLetters = count($enteredLetters);
 
             #if at least 7, add bingo bonus
             if($numberOfLetters > 6) {
@@ -119,14 +122,17 @@ class WordGames {
         #were used, and issue a warning if not.
         if($bingo) {
 
+            #when bingo has been selected, the last item in the array is
+            #the bingo, not a letter, so it is removed first
+            array_pop($lettersArray);
+
             #find out how many letters have been entered
-            $enteredLetters = [];
+            $numberOfLetters = 0;
             foreach($lettersArray as $letterNumber => $wordLetter) {
                 if($wordLetter[0]!="") {
-                    $enteredLetters[] = $wordLetter[0];
+                    ++$numberOfLetters;
                 }
             }
-            $numberOfLetters = count($enteredLetters);
 
             #if less than 7, issue warning
             if($numberOfLetters < 7) {
