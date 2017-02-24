@@ -1,6 +1,5 @@
 <?php
 
-require("tools.php");
 require("Form.php");
 require("WordGames.php");
 
