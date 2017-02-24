@@ -1,5 +1,6 @@
 <?php
 
+require("tools.php");
 require("Form.php");
 require("WordGames.php");
 
@@ -102,8 +103,8 @@ if($form->isSubmitted()) {
     }
 
     if(!$errors) {
-        $userWord = trim($letter1.$letter2.$letter3.$letter4.$letter5.$letter6.
-            $letter7.$letter8);
+        $userWord = trim($form->sanitize($letter1.$letter2.$letter3.$letter4.$letter5.$letter6.
+            $letter7.$letter8));
         $bingo = $form->isChosen("bingo");
         $score = $wordGames->calculateScore($lettersArray, $bingo);
         $warnings = $wordGames->generateWarnings($lettersArray, $bingo);

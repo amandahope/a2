@@ -506,7 +506,7 @@
                 <input type="submit" value="Submit" class="btn btn-primary" />
             </div>
             <div class="form-group col-xs-1">
-                <button type="reset" value="Clear Form" class="btn btn-default">Clear Form</button>
+                <button type="reset" value="Reset Form" class="btn btn-default">Reset Form</button>
             </div>
         </div>
     </form>
